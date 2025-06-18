@@ -227,6 +227,11 @@ GST tax details for each product category.
  - Checking if the marketing spends or Discount % has anything to do with repeat customers:
  - ![image](https://github.com/user-attachments/assets/4d2aaebd-a691-4c2e-9b18-918c447e7ee9)
 
+ - ![image](https://github.com/user-attachments/assets/38cbd757-04b0-4931-b66b-0d2f2ccf43c7)
+ - ![image](https://github.com/user-attachments/assets/83a3b88c-b110-4b30-aa04-da0dee7b8b50)
+
+
+
  
 1️⃣ Monthly Repeat Customers vs Marketing Spend
 ![image](https://github.com/user-attachments/assets/c1f3796a-8813-452f-bfce-ff37d5934db2)
