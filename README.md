@@ -103,62 +103,117 @@ GST tax details for each product category.
 
 > This structured dataset enables deep insights into customer behavior, pricing strategies, marketing efficiency, and product performance.
 
-# Business Questions:
-## 1. Identify the months with the highest and lowest acquisition rates. What strategies could be implemented to address the fluctuations and ensure consistent growth throughout the year?
-![image](https://github.com/user-attachments/assets/29e052e9-5086-4636-bcac-9049362b608d)
+### 1. Identify the months with the highest and lowest acquisition rates. What strategies could be implemented to address the fluctuations and ensure consistent growth throughout the year?
+![image](https://github.com/user-attachments/assets/3689d35e-2e2c-4686-a7d0-a1f2c6e0a3cd)
 
-## Key Observations
-
-### January Spike
-- Possibly due to **New Year promotions** or **post-holiday shopping momentum**
-- Check January's marketing spend and discounts to confirm
-
-### Drop in November
-- Likely due to seasonality or reduced campaigns
-- Investigate whether marketing spend or coupon activity dropped here
-
-## 2. Do certain months consistently show higher or lower acquisition rates? How can the company capitalize on high-performing months and improve performance during slower periods?
-- September to November has low acquisition rates
-- January, March and April has high acquisition rates
-- ![image](https://github.com/user-attachments/assets/9c3498f6-09d5-4575-9cb7-aafd1d7fa122)
-
-![image](https://github.com/user-attachments/assets/2a026654-64cd-4fa7-8c3d-980481a01f37)
-- Looks like the marketing spends has increased during Oct Nov and December
-- From the graph, I dont see a high correlation between marketing spends vs new customers acquisition
+#### Key Observations
+- The new customer acquisition month on month is decreasing over time.
   
-- Checking if the marketing has any correlation or any lagged correlation (this months marketing spend affecting next months customer acquisition)
-- ![image](https://github.com/user-attachments/assets/bdf0c539-49b8-4136-b945-ab538630e834)
-  
-- ![image](https://github.com/user-attachments/assets/55438f5c-a1f8-4b56-b196-6414c1ba9f78)
-- There seems to be no corrlation 
+- **January Spike**  
+  A significant increase in new customer acquisitions occurred in January. This may be attributed to:
+  - New Year promotions
+  - Post-holiday shopping momentum  
 
-- Checking the discounts at a monthly level:
-![image](https://github.com/user-attachments/assets/631e75a1-3e9c-48ff-b18e-5848abbae69b)
-- The discounts seems to be randomly given like (10,20,30 percent repeated for each product for all months)
-- We can have targeted discounts at during the peak months. Higher discounts during slow months might help with the new customer acquisition.
+- **November Drop**  
+  A noticeable decline in new customer acquisition was observed in November. Potential reasons could include:
+  - Seasonality effects
+  - Reduced marketing efforts or fewer discounts  
 
-- Gender wise analysis:
-- ![image](https://github.com/user-attachments/assets/70816d75-b2c2-4337-b909-f742ca981ac9)
-- The campaigns seems to be attracting more women than men.
-- We can target the current online marketing more towards Females and maybe change the marketing strategy for men
+---
 
-- Location wise analysis:
-- ![image](https://github.com/user-attachments/assets/4981e0ad-dfd8-407f-8b69-4797df8d467d)
-- Since we dont know the marketing spends by location, its hard to conclude. But if it is equally distributed across all locations:
-- The marketing spends and discounts can be more concentrated on the California, chicago and New York.
-- The Chicago customer acquisition seems to be consitant compared to other Locations. We can deep dive into the marketing and discounts in that location and try to extrapolate to other locations
+### 2. Do certain months consistently show higher or lower acquisition rates? How can the company capitalize on high-performing months and improve performance during slower periods?
 
-- Product Category analysis:
-- ![image](https://github.com/user-attachments/assets/ab196a99-11c0-4477-8189-b1b34b429ae7)
-- Most important categories are Appralel and Bags (May be we can create marketing on Winter apparels and bags)
-- Nest and Nest-USA has more customer acquistion during low acquisition months (Sept, Oct, Nov). We can try more marketing and discounts on these product categories
+1. **Monthly Trend of New Customer Acquisition:**
+   - Extracted the first transaction date for each customer to determine their acquisition month.
+   - Aggregated unique new customers per month and plotted the trend.
+     ![image](https://github.com/user-attachments/assets/9c3498f6-09d5-4575-9cb7-aafd1d7fa122)
+     
+   - #### Key Observations & Insights:
+     - Highest new customer acquisition occurred in **January 2019** (215 customers).
+     - A general decline followed with some recovery in **March**, **June**, and **August**.
+     - Lowest acquisition observed in **November 2019** (68 customers).
+     - 
 
-- ## Observations:
-- 1. Jan Mar and Apr have high retemtion rates
-  2. September to November has low acquisition rates
-  3. There is very little correlation or a lagged correlation between Marketing spends and New customer acquisitions
-  4. Based on Gender analysis, We can say that the marketing and discounts seems to be attracting new female cusomers than males. Atleast in online marketing, we can use the current campaign for females and cut the same marketing for men, We can create new customer acquisition strategies/marketing for men. (Charts attached above)
-  5. It looks like no strategies has been added to discounts (It's random). We can create new discount strategies based on gender, location and product categories and do AB testing. (charts attached above)
+2. **Marketing Spend vs. Customer Acquisition:**
+   - Combined online and offline marketing spend data with customer acquisition data by month.
+   - Created dual-axis plots to compare trends visually.
+   - Computed Pearson correlation between customer acquisition and marketing spend.
+   - Also analyzed **lagged correlation** to understand delayed effects of marketing on acquisition.
+     ![image](https://github.com/user-attachments/assets/2a026654-64cd-4fa7-8c3d-980481a01f37)
+     
+     ![image](https://github.com/user-attachments/assets/bdf0c539-49b8-4136-b945-ab538630e834)
+     
+     ![image](https://github.com/user-attachments/assets/55438f5c-a1f8-4b56-b196-6414c1ba9f78)
+
+   - #### Key Observations & Insights:
+     - No strong positive correlation observed:
+        - **Online Spend Correlation:** -0.20 (weak negative)
+        - **Offline Spend Correlation:** +0.05 (almost neutral)
+    - **Lagged correlation** (next month’s acquisition) is even more negative:
+        - **Offline:** -0.56
+        - **Online:** -0.36
+    - Indicates that **marketing spend did not significantly drive acquisition**, or there may be inefficiencies in targeting.
+      
+
+3. **Discount Impact:**
+   - Calculated average discount % per month.
+   - Performed correlation analysis with new customer acquisition.
+     ![image](https://github.com/user-attachments/assets/631e75a1-3e9c-48ff-b18e-5848abbae69b)
+
+   - #### Key Observations & Insights:
+     - The correlation between **Discount %** and **New Customers** is **-0.15**, indicating a **very weak negative relationship**.
+     - This suggests that **discounts have little to no effect** on new customer acquisition on a monthly basis.
+     - Contrary to expectations, **discounting strategies may not be a significant acquisition driver**.
+     - The discounts seems to be randomly given like (10,20,30 percent repeated for each product for all months)
+     - We can have targeted discounts at during the peak months. Higher discounts during slow months might help with the new customer acquisition.
+
+4. **Gender wise analysis:**
+     - Identified the first purchase month for each customer to determine acquisition timing.
+     - Grouped by month and gender to calculate new customer acquisition and visualized trends using a bar plot.
+       ![image](https://github.com/user-attachments/assets/c4dab982-9aea-423f-b35c-b1facba1b3b1)
+       
+     - #### Key Observations & Insights:
+        - January 2019 was the peak month for new customer acquisition, especially among females, indicating a strong start to the year possibly driven by promotions or campaigns.
+        - Female customers consistently outnumber male customers in acquisition across most months, suggesting marketing efforts or product offerings may be more appealing to women.
+        - There’s a noticeable decline in new acquisitions from mid-year (July) onward, with the lowest seen in October–November, highlighting a potential opportunity to boost engagement or revisit campaign effectiveness in the second half of the year.
+          
+
+5. **Location wise analysis:**
+     - Grouped new customers by location and month.
+     - Used a heatmap to highlight acquisition density across regions.
+       ![image](https://github.com/user-attachments/assets/4981e0ad-dfd8-407f-8b69-4797df8d467d)
+
+     - #### Key Observations & Insights:
+        - Since we dont know the marketing spends by location, its hard to conclude. But if it is equally distributed across all locations:
+        - **California and Chicago** consistently lead in new customer acquisition.
+        - **Washington DC and New Jersey** show the lowest acquisition rates.
+        - The marketing spends and discounts can be more concentrated on the California, chicago and New York.
+        - The Chicago customer acquisition seems to be consitant compared to other Locations. We can deep dive into the marketing and discounts in that location and try to extrapolate to other locations
+          
+
+6. **Product Category Acquisition:**
+   - Identified the first purchase product category of new customers.
+   - Aggregated this by category and acquisition month and visualized using a heatmap.
+     ![image](https://github.com/user-attachments/assets/93348520-b1c0-4166-8655-d8ba02a740b6)
+
+
+     - #### Key Observations & Insights:
+        - Top categories for customer acquisition:
+          - **Apparel**, **Nest-USA**, **Office**, and **Drinkware**.
+        - **Apparel** remained the most consistent driver of new customers across months.
+        - Some categories (e.g., Android, Gift Cards, Waze) had very limited or no traction.
+          
+
+## Summary
+
+    - **Discount strategy appears minimally impactful** for new customer acquisition (correlation = -0.15).
+    - **Offline and online marketing show weak or negative correlation** with new customer growth.
+    - Geographic and category-level trends reveal where customer interest and acquisition are strongest.
+    - Businesses may benefit from **rethinking promotional strategies**, and instead focus on improving targeting and optimizing acquisition channels.
+    - Based on Gender analysis, We can say that the marketing and discounts seems to be attracting new female cusomers than males. Atleast in online marketing, we can use the current campaign for females and cut the same marketing for men, We can create new customer acquisition strategies/marketing for men. (Charts attached above)
+    - It looks like no strategies has been added to discounts (It's random). We can create new discount strategies based on gender, location and product categories and do AB testing. (charts attached above)
+
+ --- 
  
  ## Q3. Identify periods with the strongest and weakest retention rates. What strategies could be implemented to improve retention during weaker months?
  - Created cohorts based on the months of purchase and cohort index based on the number of months after the first transaction and created the below retention matrix
