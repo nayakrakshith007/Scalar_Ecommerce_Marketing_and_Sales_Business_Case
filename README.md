@@ -225,8 +225,12 @@ GST tax details for each product category.
  - One interesting observation is that the We expect the repeat transactions to increase with the increase in the months. But we do observe a sharp decline from August to September.
 
  - Checking if the marketing spends or Discount % has anything to do with repeat customers:
+ - ![image](https://github.com/user-attachments/assets/4d2aaebd-a691-4c2e-9b18-918c447e7ee9)
+
  
 1️⃣ Monthly Repeat Customers vs Marketing Spend
+![image](https://github.com/user-attachments/assets/c1f3796a-8813-452f-bfce-ff37d5934db2)
+
 - ![image](https://github.com/user-attachments/assets/5843552f-3596-4dce-976f-b163344472e8)
 
 July and August witnessed peak repeat customer activity (222 and 232 customers respectively).
