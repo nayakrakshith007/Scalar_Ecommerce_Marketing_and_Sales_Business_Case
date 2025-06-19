@@ -237,6 +237,10 @@ GST tax details for each product category.
 ![image](https://github.com/user-attachments/assets/c1f3796a-8813-452f-bfce-ff37d5934db2)
 
 - ![image](https://github.com/user-attachments/assets/5843552f-3596-4dce-976f-b163344472e8)
+- 
+![image](https://github.com/user-attachments/assets/588dabf2-1960-4452-9829-0f639f4c5041)
+![image](https://github.com/user-attachments/assets/e40cc7da-be0b-407b-95f1-1716d11f0924)
+
 
 July and August witnessed peak repeat customer activity (222 and 232 customers respectively).
 These peaks coincide with low offline spend in July, suggesting repeat behavior is not purely spend-driven.
