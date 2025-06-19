@@ -1,4 +1,7 @@
 # Scalar_Ecommerce_Marketing_and_Sales_Business_Case
+
+![image](https://github.com/user-attachments/assets/ec4e3a7b-3232-416a-9c35-2575be62a6a7)
+
 ![image](https://github.com/user-attachments/assets/33134ec5-3b81-41d5-82e5-42a073ca4b3d)
 
 ![image](https://github.com/user-attachments/assets/65b8e228-0129-4167-81da-1aaa9962f5a4)
